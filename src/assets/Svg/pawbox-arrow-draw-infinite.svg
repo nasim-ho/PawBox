@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1213 570" fill="none">
+  <style>
+    .arrow-line,
+    .arrow-head {
+      stroke: #5C9E4A;
+      stroke-width: 14;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+      stroke-dasharray: 1;
+      stroke-dashoffset: 1;
+    }
+
+    /* Full cycle: draw -> pause -> restart */
+    .arrow-line {
+      animation: draw-line 3.5s cubic-bezier(.65,0,.35,1) infinite;
+    }
+
+    .arrow-head-left {
+      animation: draw-head-left 3.5s ease-out infinite;
+    }
+
+    .arrow-head-bottom {
+      animation: draw-head-bottom 3.5s ease-out infinite;
+    }
+
+    @keyframes draw-line {
+      0%, 5% {
+        stroke-dashoffset: 1;
+      }
+
+      56% {
+        stroke-dashoffset: 0;
+      }
+
+      100% {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    @keyframes draw-head-left {
+      0%, 58% {
+        stroke-dashoffset: 1;
+      }
+
+      68% {
+        stroke-dashoffset: 0;
+      }
+
+      100% {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    @keyframes draw-head-bottom {
+      0%, 68% {
+        stroke-dashoffset: 1;
+      }
+
+      78% {
+        stroke-dashoffset: 0;
+      }
+
+      100% {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .arrow-line,
+      .arrow-head {
+        animation: none;
+        stroke-dashoffset: 0;
+      }
+    }
+  </style>
+
+  <!-- Main curved line: draws first, from the right toward the arrow point. -->
+  <path
+    class="arrow-line"
+    pathLength="1"
+    d="M 1130 258
+       C 1010 165, 830 165, 700 214
+       C 625 242, 598 325, 631 383
+       C 666 444, 752 414, 755 337
+       C 758 275, 724 228, 678 215
+       C 606 194, 520 211, 428 247
+       C 320 289, 205 352, 86 414"
+  />
+
+  <!-- Arrow head: drawn only after the main line reaches the tip. -->
+  <path
+    class="arrow-head arrow-head-left"
+    pathLength="1"
+    d="M 86 414 L 148 292"
+  />
+
+  <path
+    class="arrow-head arrow-head-bottom"
+    pathLength="1"
+    d="M 86 414 L 252 414"
+  />
+</svg>

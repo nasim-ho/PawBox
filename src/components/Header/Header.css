@@ -1,0 +1,323 @@
+header {
+    padding-top: 12px;
+    display: flex;
+}
+
+
+/* =========================
+   Container
+========================= */
+
+.container {
+    width: min(1200px, calc(100% - 48px));
+    margin-inline: auto;
+}
+
+
+/* =========================
+   Header Layout
+========================= */
+
+.header-wrapper {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 155px;
+    height: auto;
+    display: block;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+
+/* =========================
+   Sign In Button
+========================= */
+
+.sign-in-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 4px;
+
+    padding: 7px 15px;
+
+    color: var(--primary-color);
+    background: transparent;
+
+    border: 2px solid var(--primary-color);
+    border-radius: 47px;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.4s ease,
+        border-color 0.4s ease,
+        color 0.4s ease;
+}
+
+.sign-in-btn:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--background-color);
+
+    animation: gelatine-hover 0.8s ease;
+}
+
+
+/* =========================
+   Sign In Icon
+========================= */
+
+.sign-in-icon-wrapper {
+    position: relative;
+
+    width: 20px;
+    height: 20px;
+
+    flex: 0 0 20px;
+}
+
+.sign-in-icon {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 20px;
+    height: 20px;
+
+    object-fit: contain;
+
+    transition: opacity 0.4s ease;
+}
+
+.sign-in-icon-default {
+    opacity: 1;
+}
+
+.sign-in-icon-hover {
+    opacity: 0;
+
+    filter: brightness(3);
+}
+
+.sign-in-btn:hover .sign-in-icon-default {
+    opacity: 0;
+}
+
+.sign-in-btn:hover .sign-in-icon-hover {
+    opacity: 1;
+}
+
+
+/* =========================
+   Gelatine Animation
+========================= */
+
+@keyframes gelatine-hover {
+
+    from,
+    to {
+        transform: scale(1, 1);
+    }
+
+    25% {
+        transform: scale(0.9, 1.1);
+    }
+
+    50% {
+        transform: scale(1.1, 0.9);
+    }
+
+    75% {
+        transform: scale(0.95, 1.05);
+    }
+}
+
+
+/* =========================
+   Mobile Menu
+========================= */
+
+.mobile-menu {
+    animation: menuOpen 0.3s ease;
+}
+
+@keyframes menuOpen {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================
+   Mobile Menu Items
+========================= */
+
+.mobile-menu li {
+    opacity: 0;
+    animation: itemOpen 0.4s ease forwards;
+}
+
+.mobile-menu li:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.mobile-menu li:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.mobile-menu li:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.mobile-menu li:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+
+/* Sign in appears after menu items */
+
+.mobile-menu .sign-in-btn {
+    opacity: 0;
+
+    animation: itemOpen 0.4s ease forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes itemOpen {
+
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================
+   Menu Toggle
+========================= */
+
+.menu-toggle {
+    display: none;
+
+    color: var(--primary-color);
+
+    border: none;
+    background: transparent;
+
+    cursor: pointer;
+}
+
+.menu-toggle svg {
+    width: 28px;
+    height: 28px;
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 767px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .header-right {
+        display: none;
+    }
+
+
+    /* ---------- Dropdown ---------- */
+
+    .mobile-menu {
+    position: absolute;
+
+    top: calc(100% + 15px);
+    left: -24px;
+
+    width: calc(100% + 48px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 46px;
+
+    padding: 30px 20px;
+
+    background: var(--background-color);
+
+    z-index: 100;
+
+    box-sizing: border-box;
+}
+
+    /* ---------- Navbar ---------- */
+
+    .mobile-menu nav ul {
+        flex-direction: column;
+        align-items: center;
+
+        gap: 55px;
+    }
+
+
+    /* ---------- Mobile Sign In ---------- */
+
+    .mobile-menu .sign-in-btn {
+        width: fit-content;
+        height: 42px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 6px;
+
+        padding: 7px 15px;
+
+        font-size: 16px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* ---------- Mobile Sign In Icon ---------- */
+
+    .mobile-menu .sign-in-icon-wrapper {
+        width: 20px;
+        height: 20px;
+
+        flex: 0 0 20px;
+    }
+
+    .mobile-menu .sign-in-icon {
+        width: 20px;
+        height: 20px;
+    }
+}

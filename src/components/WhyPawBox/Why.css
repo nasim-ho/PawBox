@@ -1,0 +1,409 @@
+.whypawbox-content {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+
+}
+
+
+/* ----- Title ----- */
+
+.Why-txt {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+
+
+.Why-txt h1 {
+
+    font-size: 40px;
+    font-family: var(--font-title);
+    color: var(--primary-text-color);
+    line-height: 1.15;
+    opacity: 0;
+    transition: 0.8s ease;
+}
+.Why-txt h1.show{
+    opacity: 1;
+}
+.Why-txt p {
+
+    font-size: 15px;
+    color: var(--secondary-text-color);
+    margin-top: 15px;
+    font-weight: 400;
+    width: 100%;
+    text-align: center;
+    line-height: 1.5;
+    opacity: 0;
+    transition: opacity 0.8s ease 0.2s;
+}
+.Why-txt p.show{
+    opacity: 1;
+}
+
+/* ----- Features ----- */
+
+.Why-features {
+
+    margin-top: 45px;
+    width: 100%;
+
+}
+
+
+.Why-img-and-list {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+/*
+    gap: 45px;*/
+
+}
+
+
+/* ----- Feature Lists ----- */
+
+.left-list,
+.right-list {
+
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    width: 270px;
+
+}
+
+
+.left-list {
+
+    align-items: flex-start;
+
+}
+
+
+.right-list {
+    
+    align-items: flex-start;
+    margin-left: 70px;
+}
+
+
+/* ----- Features ----- */
+
+.Why-feature-1,
+.Why-feature-2,
+.Why-feature-3,
+.Why-feature-4 {
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transform-origin: center;
+}
+.Why-feature-1.show {
+    animation: gelatine 0.8s ease-in-out ;
+}
+
+.Why-feature-2.show {
+    animation: gelatine 0.8s ease-in-out 0.2s;
+}
+
+.Why-feature-3.show {
+    animation: gelatine 0.8s ease-in-out 0.4s;
+}
+
+.Why-feature-4.show {
+    animation: gelatine 0.8s ease-in-out 0.6s;
+}
+
+@keyframes gelatine {
+    from,
+    to {
+        transform: scale(1, 1);
+    }
+
+    25% {
+        transform: scale(0.9, 1.1);
+    }
+
+    50% {
+        transform: scale(1.1, 0.9);
+    }
+
+    75% {
+        transform: scale(0.95, 1.05);
+    }
+}
+
+/* ----- Feature Images ----- */
+
+.left-list img,
+.right-list img {
+    background-color: #F4F0ED;
+    border-radius: 50%;
+    padding: 5px;
+    width: 55px;
+    height: auto;
+    flex-shrink: 0;
+
+}
+
+
+/* ----- Feature Text ----- */
+
+.Why-features h2 {
+
+    font-size: 19px;
+    color: var(--primary-text-color);
+    font-weight: 600;
+    margin: 0;
+}
+
+.Why-features p {
+    font-size: 13px;
+    color: var(--secondary-text-color);
+    margin-top: 6px;
+    line-height: 1.4;
+    
+}
+
+
+/* ----- Dog ----- */
+
+.Why-dog-image {
+    position: relative;
+    width: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.Why-dog-image .dog {
+
+    width: 400px;
+    height: auto;
+
+}
+.Why-dog-image .heartdog{
+    position: absolute;
+    width: 55px;
+    height: auto;
+    left: 100px;
+    top: 25px;
+}
+
+
+/*---------------Responsive-------------*/
+
+@media (max-width: 1024px) {
+
+    .whypawbox-content {
+        margin-top: 90px;
+    }
+
+    .Why-txt h1 {
+        font-size: 36px;
+    }
+
+    .Why-txt p {
+        font-size: 14px;
+    }
+
+    .Why-features {
+        margin-top: 40px;
+    }
+
+    .Why-img-and-list {
+        gap: 20px;
+    }
+
+    .left-list,
+    .right-list {
+        width: 230px;
+        gap: 60px;
+    }
+
+    .right-list {
+        margin-left: 20px;
+    }
+
+    .Why-dog-image {
+        width: 300px;
+    }
+
+    .Why-dog-image .dog {
+        width: 320px;
+    }
+
+    .Why-dog-image .heartdog {
+        width: 48px;
+        left: 80px;
+        top: 20px;
+    }
+
+    .Why-features h2 {
+        font-size: 17px;
+    }
+
+    .Why-features p {
+        font-size: 12px;
+    }
+
+    .left-list img,
+    .right-list img {
+        width: 50px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .whypawbox-content {
+        margin-top: 85px;
+    }
+
+    .Why-txt {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .Why-txt h1 {
+        font-size: 32px;
+        line-height: 1.15;
+    }
+
+    .Why-txt p {
+        font-size: 15px;
+        line-height: 1.5;
+        max-width: 380px;
+        margin-inline: auto;
+        
+    }
+
+
+    /* ---------- Features Layout ---------- */
+
+    .Why-features {
+        margin-top: 40px;
+    }
+
+    .Why-img-and-list {
+    display: grid;
+
+    width: min(100%, 620px);
+    margin-inline: auto;
+
+    grid-template-columns: minmax(0, 42%) minmax(0, 58%);
+
+    grid-template-rows: repeat(4, auto);
+
+    column-gap: 20px;
+    row-gap: 28px;
+
+    align-items: center;
+}
+
+
+    /* ---------- Dog ---------- */
+
+    .Why-dog-image {
+    grid-column: 1;
+    grid-row: 1 / 5;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Why-dog-image .dog {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+
+    /* ---------- Feature Lists ---------- */
+
+    .left-list,
+    .right-list {
+        display: contents;
+    }
+
+
+    /* ---------- Individual Features ---------- */
+
+    .Why-feature-1 {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .Why-feature-2 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .Why-feature-3 {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .Why-feature-4 {
+        grid-column: 2;
+        grid-row: 4;
+    }
+
+
+    .Why-feature-1,
+    .Why-feature-2,
+    .Why-feature-3,
+    .Why-feature-4 {
+        width: fit-content;
+        justify-content: flex-start;
+        display: flex;
+        align-items: center;
+
+        gap: 10px;
+    }
+
+
+    .left-list img,
+    .right-list img {
+        width: 40px;
+        padding: 4px;
+    }
+
+
+    .Why-features h2 {
+        font-size: 14px;
+        line-height: 1.25;
+    }
+
+    .Why-features p {
+        font-size: 11px;
+        line-height: 1.4;
+        margin-top: 5px;
+    }
+
+
+    /* ---------- Heart ---------- */
+
+    .Why-dog-image .heartdog {
+        width: 42px;
+        left: 50%;
+        top: 15px;
+        transform: translateX(-70px);
+    }
+}

@@ -1,0 +1,349 @@
+.Category-container{
+    position: relative;
+}
+.Category-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 65px;
+    width: 100%;
+    
+}
+.Category-content h1 {
+    font-size: 40px;
+    font-family: var(--font-title);
+    color: var(--primary-text-color);
+    opacity: 0;
+    transition: 0.8s ease;
+}
+
+.Category-content h1.show {
+    opacity: 1;
+}
+
+.Category-content p {
+    font-size: 15px;
+    color: var(--secondary-text-color);
+    margin-top: 15px;
+    font-weight: 400;
+    opacity: 0;
+    transition: opacity 0.8s ease 0.2s;
+}
+
+.Category-content p.show {
+    opacity: 1;
+}
+
+.FootPrintDog{
+    position: absolute;
+    opacity: 0;
+    width: 80px;
+    right: 40px;
+    top: 0px;
+}
+.FootPrintDog.show{
+    animation: show-footprint 0s 0.4s forwards;
+}
+.FootPrintCat{
+    position: absolute;
+    opacity: 0;
+    right: 115px;
+    top: 70px;
+    width: 70px;
+}
+.FootPrintCat.show{
+    animation: show-footprint 0s 0.6s forwards;
+
+}
+@keyframes show-footprint {
+    to {
+        opacity: 0.3;
+    }
+}
+
+.Category-Product{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 70px;
+    
+}
+.Category-Product-1,
+.Category-Product-2,
+.Category-Product-3,
+.Category-Product-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.Category-Product-1.show {
+    animation: category-pop 0.8s ease-out 0s forwards;
+}
+
+.Category-Product-2.show {
+    animation: category-pop 0.8s ease-out 0.4s forwards;
+}
+
+.Category-Product-3.show {
+    animation: category-pop 0.8s ease-out 0.6s forwards;
+}
+
+.Category-Product-4.show {
+    animation: category-pop 0.8s ease-out 0.8s forwards;
+}
+
+@keyframes category-pop {
+    0% {
+        transform: scale(0.94, 0.98);
+    }
+
+    30% {
+        transform: scale(1.04, 0.96);
+    }
+
+    50% {
+        transform: scale(0.98, 1.03);
+    }
+
+    70% {
+        transform: scale(1.02, 0.99);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+.Category-Product-1:hover,
+.Category-Product-2:hover,
+.Category-Product-3:hover,
+.Category-Product-4:hover{
+    
+    filter: brightness(1.05);
+}
+.Category-Product-1 img,
+.Category-Product-2 img,
+.Category-Product-3 img,
+.Category-Product-4 img{
+    width: 190px;
+    height: auto;
+    position: relative;
+    z-index: 1;
+    object-fit: contain;
+}
+.category-glow {
+    z-index: 0;
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    background: radial-gradient(
+        circle,
+        rgba(235, 235, 235, 0.40) 0%,
+        rgba(122, 120, 120, 0.23) 25%,
+        rgba(255, 255, 255, 0) 65%
+    );
+    transition:  0.5s all ease;
+
+}
+.Category-Product-1:hover .category-glow,
+.Category-Product-2:hover .category-glow,
+.Category-Product-3:hover .category-glow,
+.Category-Product-4:hover .category-glow {
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(
+        circle,
+        rgba(92, 158, 74, 0.397) 0%,
+        rgba(92, 158, 74, 0.342) 20%,
+        rgba(255, 255, 255, 0) 55%
+    );
+}
+
+.Category-Product-1 h1,
+.Category-Product-2 h1,
+.Category-Product-3 h1,
+.Category-Product-4 h1{
+    font-size: 18px;
+    color: var(--primary-text-color);
+    margin-top: 15px;
+    font-weight: 400;
+    transition:  0.4s all ease;
+}
+.Category-Product-1:hover h1,
+.Category-Product-2:hover h1,
+.Category-Product-3:hover h1,
+.Category-Product-4:hover h1{
+    color: var(--primary-color);
+    text-shadow: 0 0 0.5px currentColor;
+}
+.divider{
+    width: 1px;
+    height: 60px;
+    background-color: #ccc;
+}
+
+@media (max-width: 1197px) {
+    .Category-Product {
+        gap: 35px;
+        margin-top: 55px;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .Category-content {
+        padding-top: 55px;
+    }
+
+    .Category-content h1 {
+        font-size: 36px;
+    }
+
+    .Category-content p {
+        font-size: 14px;
+    }
+
+
+    .Category-Product {
+        gap: 35px;
+        margin-top: 55px;
+    }
+
+
+    .Category-Product-1 img,
+    .Category-Product-2 img,
+    .Category-Product-3 img,
+    .Category-Product-4 img {
+        width: 155px;
+    }
+
+
+    .category-glow {
+        width: 155px;
+        height: 155px;
+    }
+
+
+    .Category-Product-1:hover .category-glow,
+    .Category-Product-2:hover .category-glow,
+    .Category-Product-3:hover .category-glow,
+    .Category-Product-4:hover .category-glow {
+        width: 175px;
+        height: 175px;
+    }
+
+
+    .divider {
+        height: 50px;
+    }
+
+
+    .FootPrintDog {
+        width: 65px;
+        right: 25px;
+    }
+
+    .FootPrintCat {
+        width: 55px;
+        right: 85px;
+        top: 60px;
+    }
+}
+@media (max-width: 767px) {
+
+    .Category-content {
+        padding-top: 85px;
+        text-align: center;
+    }
+
+    .Category-content h1 {
+        font-size: 32px;
+    }
+
+    .Category-content p {
+        font-size: 15px;
+        margin-top: 12px;
+        text-align: center;
+    }
+
+
+    .Category-Product {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        column-gap: 10px;
+        row-gap: 35px;
+
+        margin-top: 50px;
+    }
+
+
+    .Category-Product-1,
+    .Category-Product-2,
+    .Category-Product-3,
+    .Category-Product-4 {
+        width: 100%;
+    }
+
+
+    .Category-Product-1 img,
+    .Category-Product-2 img,
+    .Category-Product-3 img,
+    .Category-Product-4 img {
+        width: 145px;
+        max-width: 100%;
+    }
+
+
+    .category-glow {
+        width: 140px;
+        height: 140px;
+    }
+
+
+    .Category-Product-1:hover .category-glow,
+    .Category-Product-2:hover .category-glow,
+    .Category-Product-3:hover .category-glow,
+    .Category-Product-4:hover .category-glow {
+        width: 155px;
+        height: 155px;
+    }
+
+
+    .Category-Product-1 h1,
+    .Category-Product-2 h1,
+    .Category-Product-3 h1,
+    .Category-Product-4 h1 {
+        font-size: 17px;
+        margin-top: 12px;
+    }
+
+
+    
+    .divider {
+        display: none;
+    }
+
+
+    /* Decorative footprints */
+    .FootPrintDog {
+        width: 20px;
+        right: 5px;
+        top: 30px;
+    }
+
+    .FootPrintCat {
+        width: 19px;
+        right: 40px;
+        top: 50px;
+    }
+}

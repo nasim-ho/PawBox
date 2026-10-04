@@ -1,0 +1,50 @@
+@font-face {
+    font-family: "Hey Comic";
+    src: url("../assets/fonts/HeyComic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face{
+    font-family: "Inter";
+    src: url("../assets/fonts/Inter_18pt-Bold.ttf") format(truetype);
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face{
+    font-family: "Inter";
+    src: url("../assets/fonts/Inter_18pt-SemiBold.ttf") format(truetype);
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face{
+    font-family: "Inter";
+    src: url("../assets/fonts/Inter_18pt-Medium.ttf") format(truetype);
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face{
+    font-family: "Inter";
+    src: url("../assets/fonts/Inter_18pt-Regular.ttf") format(truetype);
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face{
+    font-family: "Inter";
+    src: url("../assets/fonts/Inter_18pt-Light.ttf") format(truetype);
+    font-weight: 300;
+    font-style: normal;
+}
+
+:root{
+    /*----Color----*/
+    --primary-color : #5C9E4A;
+    --background-color: #EFEBE7;
+    --primary-text-color : #191919;
+    --secondary-text-color : #4E4E4E;
+    --primaryHover-color: #2e661e;
+
+    /*----Font----*/
+    --font-title : "Hey Comic", sans-serif;
+    --font-body : "Inter", sans-serif;
+}

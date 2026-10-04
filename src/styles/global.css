@@ -1,0 +1,9 @@
+body{
+    font-family: var(--font-body);
+    background-color: var(--background-color);
+
+}
+.container{
+    width: min(1200px, calc(100% - 48px));
+    margin-inline: auto;
+}

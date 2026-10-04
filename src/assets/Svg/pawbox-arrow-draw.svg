@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1213 570" fill="none">
+  <style>
+    .draw {
+      stroke: #5C9E4A;
+      stroke-width: 14;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+      vector-effect: non-scaling-stroke;
+      stroke-dasharray: 1;
+      stroke-dashoffset: 1;
+      animation: draw-arrow 1.8s cubic-bezier(.65,0,.35,1) infinite;
+    }
+
+    @keyframes draw-arrow {
+      to { stroke-dashoffset: 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .draw {
+        animation: none;
+        stroke-dashoffset: 0;
+      }
+    }
+  </style>
+
+  <path class="draw" pathLength="1" d="
+    M 1130 258
+    C 1010 165, 830 165, 700 214
+    C 625 242, 598 325, 631 383
+    C 666 444, 752 414, 755 337
+    C 758 275, 724 228, 678 215
+    C 606 194, 520 211, 428 247
+    C 320 289, 205 352, 86 414
+    M 86 414 L 148 292
+    M 86 414 L 252 414
+  "/>
+</svg>
