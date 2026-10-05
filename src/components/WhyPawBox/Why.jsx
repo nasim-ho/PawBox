@@ -1,7 +1,7 @@
 import "./Why.css";
 import { useEffect, useRef, useState } from "react";
 
-import dog from "../../assets/images/WhyPet-pic.png";
+import dog from "../../assets/images/WhyPet-pic.webp";
 import HeartDog from "../../assets/images/heart.png"
 
 import organic from "../../assets/icons/icons8-organic-food-100.png";

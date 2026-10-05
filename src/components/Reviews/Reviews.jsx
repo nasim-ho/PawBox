@@ -2,12 +2,12 @@
 import ReviewsCards from './ReviewsCards/ReviewsCards';
 
 // Images
-import ImageCustomer1 from '../../assets/images/customer1.png';
-import ImageCustomer2 from '../../assets/images/customer2.png';
-import ImageCustomer3 from '../../assets/images/customer3.png';
-import ImageCustomer4 from '../../assets/images/customer4.png';
-import ImageCustomer5 from '../../assets/images/customer5.png';
-import ImageCustomer6 from '../../assets/images/customer6.png';
+import ImageCustomer1 from '../../assets/images/customer1.webp';
+import ImageCustomer2 from '../../assets/images/customer2.webp';
+import ImageCustomer3 from '../../assets/images/customer3.webp';
+import ImageCustomer4 from '../../assets/images/customer4.webp';
+import ImageCustomer5 from '../../assets/images/customer5.webp';
+import ImageCustomer6 from '../../assets/images/customer6.webp';
 
 // Swiper
 import { Autoplay, Pagination } from 'swiper/modules';

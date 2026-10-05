@@ -1,5 +1,5 @@
 import './CTA.css';
-import catdog from '../../assets/images/CTA-pic.png'
+import catdog from '../../assets/images/CTA-pic.webp'
 import sparkleBig from "../../assets/images/sparkleBig.png";
 import sparkleSmall from "../../assets/images/sparkleSmall.png";
 import useRevealOnView from "../../hooks/useRevealOnView";

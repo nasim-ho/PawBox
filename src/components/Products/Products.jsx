@@ -1,9 +1,9 @@
 import './Products.css';
 import ProductCard from './ProductCard/ProductCard'
-import favorire1 from '../../assets/images/favorire1.png';
-import favorire2 from '../../assets/images/favorire2.png';
-import favorire3 from '../../assets/images/favorire3.png';
-import favorire4 from '../../assets/images/favorire4.png';
+import favorire1 from '../../assets/images/favorire1.webp';
+import favorire2 from '../../assets/images/favorire2.webp';
+import favorire3 from '../../assets/images/favorire3.webp';
+import favorire4 from '../../assets/images/favorire4.webp';
 
 import useRevealOnView from "../../hooks/useRevealOnView";
 

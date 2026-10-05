@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import ShopIcon from "../../assets/icons/icons8-pet-food-96.png";
-import HeroCat from "../../assets/images/cat-hero.png";
+import HeroCat from "../../assets/images/cat-hero.webp";
 import "./Hero.css";
 import useCountUp from "./CountUp/useCountUp"
 import HeroArrow from "./HeroArrow/HeroArrow"

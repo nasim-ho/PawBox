@@ -1,8 +1,8 @@
 import "./Category.css";
-import premiumfood from '../../assets/images/premiumfood.png'
-import treats from '../../assets/images/treats&snacks.png'
-import toys from '../../assets/images/toys.png'
-import essential from '../../assets/images/essential.png'
+import premiumfood from '../../assets/images/premiumfood.webp'
+import treats from '../../assets/images/treats&snacks.webp'
+import toys from '../../assets/images/toys.webp'
+import essential from '../../assets/images/essential.webp'
 import FootPrintDog from '../../assets/images/Footprint-dog.png';
 import FootPrintCat from '../../assets/images/Footprint-cat.png';
 
