@@ -1,20 +1,18 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="%BASE_URL%favicon-pawbox.png" />
-    <link
-    rel="preload"
-    href="/fonts/HeyComic.ttf"
-    as="font"
-    type="font/ttf"
-    crossorigin
-/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pawbox</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="%BASE_URL%favicon-pawbox.png" />
+  <link rel="preload" as="image" href="%BASE_URL%cat-hero.webp" fetchpriority="high" />
+  <link rel="preload" href="/fonts/HeyComic.ttf" as="font" type="font/ttf" crossorigin />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pawbox</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>
